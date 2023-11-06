@@ -4,9 +4,10 @@
 - memory game:
   script:⌨️
   - flip cards
-  - check for match
+  x check for match
   - unflip cards
   - end game
+  - start game
   css:🖌️
   - style board
   - style front and back of cards
