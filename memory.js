@@ -29,7 +29,7 @@ function lock(){
   // cards bleiben aufgedeckt
 }
 function checkForMatch (){
-  // firtstCard.dataset.picture === secondCard.dataset.picture ? lock : unflipCards
+  firstCard.dataset.picture === secondCard.dataset.picture ? lock() : unflipCards()
 }
 
 cards.forEach(card => card.addEventListener("click", flipCard))
