@@ -9,7 +9,17 @@ let hasCardFlipped = false;
 let firstCard, secondCard;
 
 function flipCard() {
-  //add classList('flip')
+  this.classList.add('flip');
+  if (!hasCardFlipped) {
+    hasCardFlipped = true;
+    firstCard = this;
+    console.log(firstCard);
+  } else {
+    hasCardFlipped = false;
+    secondCard = this;
+    console.log(secondCard);
+    checkForMatch()
+  }
 }
 function unflipCards(){
   // remove classlist('flip')
