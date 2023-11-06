@@ -4,8 +4,9 @@
 // function checkForMatch
 
 const cards = document.querySelectorAll('.memory-card');
-
+// are any cards already flipped?
 let hasCardFlipped = false;
+// for a pair of cards
 let firstCard, secondCard;
 
 function flipCard() {
@@ -21,12 +22,15 @@ function flipCard() {
     checkForMatch()
   }
 }
+
 function unflipCards(){
+  console.log('unflip');
   // remove classlist('flip')
 }
 
 function lock(){
   // cards bleiben aufgedeckt
+  console.log('lock!')
 }
 function checkForMatch (){
   firstCard.dataset.picture === secondCard.dataset.picture ? lock() : unflipCards()
