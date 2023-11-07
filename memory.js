@@ -1,3 +1,4 @@
+const resetButton = document.getElementById('reset-button');
 const cards = document.querySelectorAll('.memory-card');
 // are any cards already flipped?
 let hasCardFlipped = false;
@@ -17,18 +18,22 @@ function flipCard() {
     checkForMatch()
   }
 }
-
-function unflipCards(){
+// pictures are covered
+function unflipCards() {
   console.log('unflip');
-  // remove classlist('flip')
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+}, '1500')
 }
 
-function lock(){
-  // cards bleiben aufgedeckt
-  console.log('lock!')
+function lock() {
+  // cards stay flipped
+  firstCard.removeEventListener('click', flipCard);
+  firstCard.removeEventListener('click', flipCard);
 }
-function checkForMatch (){
+function checkForMatch() {
   firstCard.dataset.picture === secondCard.dataset.picture ? lock() : unflipCards()
 }
 
-cards.forEach(card => card.addEventListener("click", flipCard))
+cards.forEach(card => card.addEventListener("click", flipCard));
