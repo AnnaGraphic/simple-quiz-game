@@ -1,8 +1,3 @@
-// make a memory game - what functions are needed:
-// funktion flip
-// function unflip
-// function checkForMatch
-
 const cards = document.querySelectorAll('.memory-card');
 // are any cards already flipped?
 let hasCardFlipped = false;
@@ -14,11 +9,11 @@ function flipCard() {
   if (!hasCardFlipped) {
     hasCardFlipped = true;
     firstCard = this;
-    console.log(firstCard);
+    //console.log(firstCard);
   } else {
     hasCardFlipped = false;
     secondCard = this;
-    console.log(secondCard);
+    //console.log(secondCard);
     checkForMatch()
   }
 }
